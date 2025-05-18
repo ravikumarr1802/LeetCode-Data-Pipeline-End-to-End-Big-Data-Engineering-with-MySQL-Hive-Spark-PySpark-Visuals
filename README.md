@@ -2,7 +2,7 @@
 
 ## 🌟 Project Overview
 
-This project demonstrates a comprehensive data engineering pipeline, transforming data from a LeetCode dataset (likely problem data) into interactive visualizations. The pipeline utilizes a variety of big data technologies, showcasing proficiency in data ingestion, processing, storage, and analysis.
+This project demonstrates a comprehensive data engineering pipeline, transforming data from a LeetCode dataset (240 company wise problems data) into interactive visualizations. The pipeline utilizes a variety of big data technologies, showcasing proficiency in data ingestion, processing, storage, and analysis.
 
 ## 🛠️ Technologies Used
 
