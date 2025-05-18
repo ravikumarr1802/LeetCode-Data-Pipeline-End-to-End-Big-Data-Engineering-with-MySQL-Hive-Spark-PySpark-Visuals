@@ -82,7 +82,8 @@ This project demonstrates a comprehensive data engineering pipeline, transformin
     *   Run the Spark Scala code within `spark-shell`. Ensure you include the required JARs.
     *   Execute the Python script using `spark-submit` or within a suitable Python environment configured to use Spark. Make sure `findspark` is initialized.
 4.  🖼️ **Visualization:** The Python script will generate plots which are usually displayed in the console or can be saved to files.
-
+## 🚀 How to Execute
+See the full step-by-step guide here: [project_steps.md](./project_steps.md)
 ## 💡 Future Improvements
 
 *   ➡️ **Data Validation:** Implement data validation steps to ensure data quality.
