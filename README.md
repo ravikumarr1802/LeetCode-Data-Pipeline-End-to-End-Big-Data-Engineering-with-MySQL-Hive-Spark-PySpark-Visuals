@@ -51,11 +51,11 @@ This project demonstrates a comprehensive data engineering pipeline, transformin
 
 ## 📁 Code Structure
 
-*   📜 **MySQL Scripts:** SQL scripts for table creation and data loading [See Figure 3](Executions/fig-3.png).
-*   ⌨️ **Sqoop Command:** Sqoop command for transferring data to Hive [See Figure 4](Executions/fig-4.png).
-*   📜 **Hive Scripts:** HiveQL for table creation, partitioning, and data loading [See Figure 5 ](Executions/fig-5.png) & [6](Executions/fig-6.png).
-*   ✨ **Spark Scala Code:** Spark Scala code with HiveContext and Spark SQL queries for data processing and aggregation [See Figure 7](Executions/fig-7.png).
-*   🐍 **Spark Python Code:** Python script using Spark and Matplotlib for data reading from HDFS, analysis, and visualization [See Figure 9](Executions/fig-9.png).
+*   📜 **MySQL Scripts:** SQL scripts for table creation and data loading.
+*   ⌨️ **Sqoop Command:** Sqoop command for transferring data to Hive.
+*   📜 **Hive Scripts:** HiveQL for table creation, partitioning, and data loading.
+*   ✨ **Spark Scala Code:** Spark Scala code with HiveContext and Spark SQL queries for data processing and aggregation.
+*   🐍 **Spark Python Code:** Python script using Spark and Matplotlib for data reading from HDFS, analysis, and visualization.
 
 ## 🎓 Key Learning Outcomes
 
