@@ -326,7 +326,8 @@ Finally, PySpark is used to read the processed data from HDFS and Matplotlib is 
 ## 📁 Code Structure
 
 This repository contains:
-*   This `README.md` file.
+*   This `pipeline_steps.md` file.
+*   A `README.md` file.
 *   An `Executions/` directory (conceptual) containing screenshots or diagrams of the steps.
 *   Potentially, separate script files for SQL, HiveQL, Scala, and Python if not run interactively.
 
