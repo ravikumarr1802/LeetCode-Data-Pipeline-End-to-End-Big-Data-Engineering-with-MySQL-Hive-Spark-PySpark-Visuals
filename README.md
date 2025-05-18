@@ -19,27 +19,27 @@ This project demonstrates a comprehensive data engineering pipeline, transformin
 
 1.  📥 **Data Acquisition:**
     *   The project begins with a CSV file (likely named `Leetcode.csv`) containing LeetCode problem data.
-    *   This CSV file is transferred to a virtual machine (VM) using WinSCP. (See Figure 2)
+    *   This CSV file is transferred to a virtual machine (VM) using WinSCP. [See Figure 2](Executions/fig-2.png)
 
 2.  ➡️🗄️ **Data Ingestion into MySQL:**
     *   A MySQL database and table (`dsa`) are created.
-    *   The `merged.csv` (which is a copy of the `Leetcode.csv`) is loaded into the `dsa` table using a `LOAD DATA INFILE` command. (See Figure 3)
+    *   The `merged.csv` (which is a copy of the `Leetcode.csv`) is loaded into the `dsa` table using a `LOAD DATA INFILE` command. [See Figure 3](Executions/fig-3.png)
 
 3.  ➡️📦 **Data Transfer to Hive using Sqoop:**
-    *   Sqoop is used to import data from the `dsa` table in MySQL into a Hive table (`ravi.dsa`). The `--hive-import` and related flags automate table creation in Hive. (See Figure 4)
+    *   Sqoop is used to import data from the `dsa` table in MySQL into a Hive table (`ravi.dsa`). The `--hive-import` and related flags automate table creation in Hive. [See Figure 4](Executions/fig-4.png)
 
 4.  🧩 **Data Partitioning in Hive:**
     *   An `awk` script is used to create separate CSV files for each difficulty level (EASY, MEDIUM, HARD) based on the `merged.csv` file.
-    *   Three Hive tables are created (`dsa_easy`, `dsa_medium`, `dsa_hard`) with partitioning by difficulty. (See Figure 5)
-    *   Data is loaded into the partitioned tables from the respective difficulty-level CSV files. (See Figure 6)
+    *   Three Hive tables are created (`dsa_easy`, `dsa_medium`, `dsa_hard`) with partitioning by difficulty. [See Figure 5](Executions/fig-5.png)
+    *   Data is loaded into the partitioned tables from the respective difficulty-level CSV files. [See Figure 6](Executions/fig-6.png)
 
 5.  ✨ **Spark Analytics (Scala):**
     *   A `HiveContext` is initialized in Spark to access the Hive data.
-    *   Spark SQL queries are used to perform aggregate analysis on the partitioned Hive tables, calculating average frequency and acceptance rates for each company, grouped by difficulty. (See Figure 7)
+    *   Spark SQL queries are used to perform aggregate analysis on the partitioned Hive tables, calculating average frequency and acceptance rates for each company, grouped by difficulty. [See Figure 7](Executions/fig-7.png)
     *   The results are saved as CSV files.
 
 6.  💾 **HDFS Storage:**
-    *   The CSV results from Spark are transferred to HDFS using the `hdfs dfs -put` command. (See Figure 8)
+    *   The CSV results from Spark are transferred to HDFS using the `hdfs dfs -put` command. [See Figure 8](Executions/fig-8.png)
 
 7.  🐍📊 **Spark Python3 Visualization:**
     *   A Python script uses `findspark` to initialize Spark.
@@ -47,15 +47,15 @@ This project demonstrates a comprehensive data engineering pipeline, transformin
     *   The Spark DataFrame is converted to a Pandas DataFrame for easier manipulation and plotting.
     *   Data cleaning (handling missing values, converting data types) is performed.
     *   The data is sorted and chunked to create separate plots for each subset of the companies.
-    *   Matplotlib is used to generate visualizations (line plots) showing company names on the x-axis and average frequency/acceptance rates on the y-axis. (See Figure 9)
+    *   Matplotlib is used to generate visualizations (line plots) showing company names on the x-axis and average frequency/acceptance rates on the y-axis. [See Figure 9](Executions/fig-9.png)
 
 ## 📁 Code Structure
 
-*   📜 **MySQL Scripts:** SQL scripts for table creation and data loading (See Figure 3).
-*   ⌨️ **Sqoop Command:** Sqoop command for transferring data to Hive (See Figure 4).
-*   📜 **Hive Scripts:** HiveQL for table creation, partitioning, and data loading (See Figure 5 & 6).
-*   ✨ **Spark Scala Code:** Spark Scala code with HiveContext and Spark SQL queries for data processing and aggregation (See Figure 7).
-*   🐍 **Spark Python Code:** Python script using Spark and Matplotlib for data reading from HDFS, analysis, and visualization (See Figure 9).
+*   📜 **MySQL Scripts:** SQL scripts for table creation and data loading [See Figure 3](Executions/fig-3.png).
+*   ⌨️ **Sqoop Command:** Sqoop command for transferring data to Hive [See Figure 4](Executions/fig-4.png).
+*   📜 **Hive Scripts:** HiveQL for table creation, partitioning, and data loading [See Figure 5 ](Executions/fig-5.png) & [6](Executions/fig-6.png).
+*   ✨ **Spark Scala Code:** Spark Scala code with HiveContext and Spark SQL queries for data processing and aggregation [See Figure 7](Executions/fig-7.png).
+*   🐍 **Spark Python Code:** Python script using Spark and Matplotlib for data reading from HDFS, analysis, and visualization [See Figure 9](Executions/fig-9.png).
 
 ## 🎓 Key Learning Outcomes
 
